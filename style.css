@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'roboto', sans-serif;
+}
+
+.homepage{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url("https://wallpaperaccess.com/full/1217216.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    pointer-events: none;
+    border: 4px solid #fff;
+    border-radius: 20px;
+}
+
+.heading{
+    font-size: 3vw;
+    font-weight: 500;
+    color: #fff;
+}
+
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    min-width: 300px;
+    width: 500px;
+    height: 0;
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    animation: growNavbar .5s 1s forwards 1;
+}
+
+@keyframes growNavbar{
+    100%{
+        height: 60px;
+    }
+}
+
+.link-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-item{
+    list-style: none;
+    width: 25%;
+    height: 100%;
+    display: flex;
+}
+
+.links{
+    color: #1d1d1d;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+}
+
+.links.active,
+.links:hover{
+    background: rgb(230, 230, 230);
+}
+
+.links i{
+    margin-right: 10px;
+}
+
+@media (max-width: 500px){
+    .heading{
+        font-size: 50px;
+    }
+    .navbar{
+        width: 85%;
+    }
+    .links span{
+        display: none;
+    }
+}
+
+  
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: #4682B4;
+  }
+  
+  .projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid white;
+    color: white;
+  }
+  
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+  }
+  
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project {
+    background: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    color: #6082B6;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: #6495ED;
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 6rem;
+    color: white;
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px black;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: #0047AB;
+    border-top: 4px solid #ADD8E6;
+    color: white;
+  }
+  
+  footer > p {
+    margin: 2rem;
+  }
+  
+  footer i {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
